@@ -1,0 +1,123 @@
+.container {
+    max-width: 800px;
+    margin: 2% auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    gap: 20px;
+}
+
+.cart-item-details {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.cart-item-name {
+    font-weight: 600;
+    margin-right: 10px;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.remove-from-cart-btn,
+.quantity-btn {
+    background-color: #e53935;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.remove-from-cart-btn:hover,
+.quantity-btn:hover {
+    background-color: #d32f2f;
+    transform: scale(1.05);
+}
+
+.item-quantity {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.cart-item-price {
+    font-weight: 600;
+    color: #333;
+}
+
+.continue-shopping-link {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+.continue-shopping-link:hover {
+    color: #0056b3;
+}
+
+.checkout-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    align-self: flex-end;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.checkout-button:hover {
+    background-color: #388E3C;
+    transform: translateY(-3px);
+}
+
+.total-price-data {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    text-align: right;
+    font-weight: 600;
+    color: #444;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    .cart-item-details, .item-quantity, .cart-item-price {
+        font-size: 0.9rem;
+    }
+    .checkout-button {
+        margin-left: 0;
+    }
+}
+

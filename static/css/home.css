@@ -1,0 +1,164 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+.header {
+    width: 100%;
+    min-height: 100vh;
+    background: #F3F4F6;
+    color: #333;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10%;
+    background: #2A2A2E;
+    position: relative;
+}
+
+.logo {
+    width: 120px;
+}
+
+.profile-user-pic {
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+nav ul {
+    width: 100%;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #EDEDED;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+nav ul li a:hover {
+    background-color: #404045;
+}
+
+.profile-sub-menu-wrap {
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    width: 320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s, opacity 0.3s;
+    opacity: 0;
+}
+
+.profile-sub-menu-wrap.open-menu {
+    max-height: 400px;
+    opacity: 1;
+}
+
+.profile-sub-menu {
+    background: #E8E9EB;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-user-info {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.profile-user-info h3, .profile-user-info h5 {
+    font-weight: 500;
+    color: #333;
+}
+
+.profile-user-info img {
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.profile-sub-menu hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 15px 0 10px;
+}
+
+.profile-sub-menu-link img {
+    width: 24px;
+    height: 24px;
+    background-color: #D5D6D8;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.profile-sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    margin: 12px 0;
+}
+
+.register-login-menu {
+    display: flex;
+    align-items: center;
+    background-color: #4D90FE;
+    padding: 5px 10px;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #EDEDED;
+    font-weight: bold;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.menu-link:hover {
+    background-color: #3C77D6;
+}
+
+.cart-icon {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #FF5656;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+

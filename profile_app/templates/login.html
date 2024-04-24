@@ -1,0 +1,17 @@
+{% extends "home.html" %}
+
+{% block content %}
+<div style="max-width: 400px; margin: 50px auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px;">
+    <h2 style="text-align: center;">Login</h2>
+    <form method="post" style="display: flex; flex-direction: column;">
+        {% csrf_token %}
+        {{ form.username.label_tag }} <br>
+        {{ form.username }} <br><br>
+
+        {{ form.password.label_tag }} <br>
+        {{ form.password }} <br><br>
+
+        <button type="submit" style="padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Login</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "home.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/checkout.css' %}">
+<div class="container">
+    <div id="order-placed-section" style="display: none;">
+        <h2>Order Placed</h2>
+        <p id="order-success-message"></p>
+
+    </div>
+    <h1>Checkout</h1>
+    <p>Order Summary :</p>
+    <ul>
+        {% for item in cart_items %}
+        <li>{{ item.product.name }} x {{ item.quantity }}</li>
+        {% endfor %}
+    </ul>
+    <p>Total Amount: &#8377<span id="total_item_amount">{{total_amount}}</span></p>
+
+    <button id="rzp-button1">Pay with Razorpay</button>
+</div>
+<div id="checkout-data" data-email="{{ email }}" data-fullname="{{ full_name }}">
+</div>
+<script>
+    var handlePaymentUrl = "{% url 'handle-payment' %}";
+</script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="{% static 'js/checkout.js' %}"></script>
+{% endblock %}
